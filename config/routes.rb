@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'eventquestions/new'
+  get 'eventquestions/create'
+  get 'eventquestions/index'
+
+  resources :login
+  resources :agenda
+  root 'login#index'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
