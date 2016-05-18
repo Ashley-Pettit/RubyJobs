@@ -1,7 +1,12 @@
-
-<BR />
 <h1>Participation Code</h1>
-<h6>This is found on your venue ticket</h6>
-<input />
-<%= link_to 'SUBMIT', new_login_path %><BR />
-<%= @errormessage %>
+
+<form action="/new" method="post">
+
+  <input class="std_input" required>
+  <h6>This is found on your venue ticket</h6>
+  <%= @errormessage %>
+  <%# This needs to create a session %>
+
+</form>
+
+<%= link_to 'SUBMIT', new_login_path, class: "button" %>

@@ -1,10 +1,11 @@
 *{
   padding:0px;
   margin:0px;
+  color:black;
 }
 
 
-/* The Modal (background) */
+/* MODEL START */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -42,6 +43,8 @@
     cursor: pointer;
 }
 
+/* MODEL END */
+
 body {
   background-color: #fff;
   color: #333;
@@ -59,56 +62,6 @@ pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
-}
-
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
-
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
-}
-
-#notice {
-  color: green;
-}
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-
-  h2 {
-    font-weight: bold;
-    font-size: 12px;
-    background-color: #c00;
-    color: #fff;
-  }
-
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
 }
 
 .header_right {
@@ -151,4 +104,50 @@ button {
 
 p, div {
   margin-bottom:1rem;
+}
+
+
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   padding: 13px 26px;
+   margin:20rem;
+   border-radius: 14px;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffffff;
+   font-size: 18px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+.std_input {
+  width: 15rem;
+  height: 1.5rem;
+  padding-bottom: .5rem;
+}
+
+.agenda_item{
+  padding-top:1.2rem;
+  padding-bottom:1.2rem;
+  margin-bottom: .7rem;
+  font-size:20px;
+  color:black;
+  background-color:lightgrey;
+  list-style:none;
+  font-variant: small-caps;
+}
+
+h1, h2, h3 {
+  padding-bottom: 2rem;
 }

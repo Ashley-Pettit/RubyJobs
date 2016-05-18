@@ -1,23 +1,21 @@
-
-<h1>Welcome! <BR /><BR /><BR />
-
-Your code has been activated.</h1><BR />
+<h1>Welcome!</h1>
+<h2>Your code has been activated.</h2>
 <h3>The fields below are optional. If you do not enter a name your questions will be posted as anonomous</h3>
-<BR />
-<BR />
+
 <div>
-  Name<input />
-</div>
-<div>
-  Company<input />
-</div>
-<div>
-  Years experience<input />
-</div>
-<div>
-  Name<input class ='edit_profit_input_field' id = 'name'>
+  Name: <input class="std_input">
 </div>
 
+<div>
+  Company: <input class="std_input">
+</div>
 
+<div>
+  Years experience: <input class="std_input">
+</div>
 
-<%= link_to 'START - EDIT ME', agenda_index_path %>
+<div>
+  Email: <input class="std_input" id='name'>
+</div>
+
+<%= link_to 'START', agenda_index_path, class: "button" %>
