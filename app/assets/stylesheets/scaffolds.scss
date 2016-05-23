@@ -2,8 +2,20 @@
   padding:0px;
   margin:0px;
   color:black;
+  list-style: none
 }
 
+li {
+  margin-left:1.2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top:.8rem;
+}
 
 /* MODEL START */
 .modal {
@@ -144,10 +156,6 @@ p, div {
   background-color:lightblue;
   list-style:none;
   font-variant: small-caps;
-}
-
-h1, h2, h3, h4 {
-  margin-bottom: .7rem;
 }
 
 
