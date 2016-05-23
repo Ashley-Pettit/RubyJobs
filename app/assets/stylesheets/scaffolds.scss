@@ -49,35 +49,34 @@ body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
+  background-color: tomato;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 11px;
+  line-height: 11px;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
 
 .header_right {
-  padding: 17px;
+  padding: 1rem;
   float: right;
   color:grey;
+  text-decoration:none;
 }
 
 .header_left {
-  padding: 17px;
+  padding: 1rem;
   float: left;
   color:grey;
+  text-decoration:none;
 }
 
 hr {
   width:100%;
+  color:black;
 }
 
 .container {
@@ -88,7 +87,7 @@ header {
   margin-bottom:2.5rem;
 }
 
-header > h2{
+header > h3{
   cursor: pointer;
 }
 
@@ -98,8 +97,8 @@ header > h2{
 }
 
 button {
-  height:2rem;
-  width:6rem;
+  min-height:2rem;
+  min-width:6rem;
 }
 
 p, div {
@@ -110,16 +109,16 @@ p, div {
 .button {
    border-top: 1px solid #96d1f8;
    background: #65a9d7;
-   padding: 13px 26px;
-   margin:20rem;
+   padding: 1rem 2rem;
+   margin:2rem;
    border-radius: 14px;
    box-shadow: rgba(0,0,0,1) 0 1px 0;
    text-shadow: rgba(0,0,0,.4) 0 1px 0;
    color: #ffffff;
-   font-size: 18px;
+   font-size: 1rem;
    font-family: Georgia, serif;
    text-decoration: none;
-   vertical-align: middle;
+   vertical-align: top;
    }
 .button:hover {
    border-top-color: #28597a;
@@ -132,22 +131,33 @@ p, div {
    }
 
 .std_input {
-  width: 15rem;
-  height: 1.5rem;
-  padding-bottom: .5rem;
+  font-size:1rem;
+  margin-bottom: 1rem;
 }
 
 .agenda_item{
   padding-top:1.2rem;
   padding-bottom:1.2rem;
   margin-bottom: .7rem;
-  font-size:20px;
+  font-size:18px;
   color:black;
-  background-color:lightgrey;
+  background-color:lightblue;
   list-style:none;
   font-variant: small-caps;
 }
 
-h1, h2, h3 {
-  padding-bottom: 2rem;
+h1, h2, h3, h4 {
+  margin-bottom: .7rem;
+}
+
+
+header {
+  padding:.1rem;
+  background-color: black;
+  color:yellow;
+  font-family:fantasy, monospace;;
+}
+
+.container {
+  width:70%;
 }

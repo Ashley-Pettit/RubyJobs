@@ -2,16 +2,17 @@
 <html>
 <head>
   <title>Questionable</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <header>
-    <h2 class="header_left">Questionable</h2>
-    <h2 class= "header_right">Schedule</h2>
-    <h2 class="header_right">Logout</h2>
-    <HR class="hr">
+    <h2><%= link_to 'Questionable', root_path, class:"header_left" %> </h2>
+    <h3><%= link_to 'Logout', root_path, class:"header_right" %></h3>
+    <h3><%= link_to 'Schedule', agenda_index_path, class:"header_right" %></h3>
+    <h3><%= link_to 'My Profile', edit_profile_path, class:"header_right" %></h3>
+    <hr class="hr">
   </header>
 
   <div class="container">

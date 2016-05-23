@@ -1,12 +1,12 @@
+<%#Creating a new loggin session - This is the first page%>
+
 <h1>Participation Code</h1>
 
-<form action="/new" method="post">
-
-  <input class="std_input" required>
+<%= form_tag '/login', method: 'get' do %>
+  <input class="std_input" name='input_code'required>
   <h6>This is found on your venue ticket</h6>
   <%= @errormessage %>
-  <%# This needs to create a session %>
-
-</form>
-
-<%= link_to 'SUBMIT', new_login_path, class: "button" %>
+  <button class="button">SUBMIT</button>
+<% end %>
+<%#simple form - gem
+#form for - rails thingo %>

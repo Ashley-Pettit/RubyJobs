@@ -1,10 +1,12 @@
-<%#Patching the loggin session%>
+<%#P2 - Optional editing of the loggin session - This comes after the new page%>
 
-<h1>Edit your details </h1>
+<h1>Welcome!</h1>
+<h3>Your code has been activated</h3>
+<h4>The fields below are optional. If you do not enter a name your questions will be posted as anonomous</h4>
 
 <%= form_tag '/login', method: 'patch' do %>
   <label>Name:</label>
-  <input class="std_input" name='name_input'><BR />
+  <input class="std_input" name='name_input' default="sup"><BR />
   <label>Email:</label>
   <input class="std_input" name='email_input'><BR />
   <label>Company:</label>

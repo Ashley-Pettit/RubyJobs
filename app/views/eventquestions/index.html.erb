@@ -5,128 +5,22 @@
 </p>
 
 <% if false %>
-<div class="question-list">
-  <% @questions.each do |question| %>
-  <div class="ui-card" data-question-id="<%= question.id %>">
-    <header class="content">
-      <div class="right">14h</div>
-      <!-- <img class="avatar" src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97200&w=200&h=200" alt=""> DT -->
-    </header>
-    <!-- <div class="image">
-      <img src="<%= question.image_url %>" alt="">
-      <span class="star">&#9733;</span>
-    </div> -->
-    <div class="content">
-      <h2><%= question.name %></h2>
-      <h4>at GA</h4>
-    </div>
-    <footer class="content">
-      <span class="right counter"><%= question.likes.count %></span>
-      <span>bookmark</span>
-    </footer>
-  </div>
-  <% end %>
-</div>
+<%= form_for :questions, url: articles_path do |f| %>
 
-<script id="card-template" type="text/x-handlebars-template">
-  <div class="ui-card" data-question-id="{{ id }}">
-    <header class="content">
-      <div class="right">14h</div>
-      <img class="avatar" src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97200&w=200&h=200" alt=""> DT
-    </header>
-    <div class="image">
-      <img src="{{ image_url }}" alt="">
-      <span class="star">&#9733;</span>
-    </div>
-    <div class="content">
-      <h2>{{ name }}</h2>
-      <h4>at GA</h4>
-      <h5>sdfsdfsdfsdf</h5>
-    </div>
-    <footer class="content">
-      <span class="right counter">{{ like_count }}</span>
-      <span>bookmark</span>
-    </footer>
-  </div>
-</script>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
 
-<script>
-$('#add-question').on('click', function(event) {
-  event.preventDefault(); // js: i got this, form submission step aside
-  console.log('adding question');
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
 
-  var settings = {
-    url: '/api/questions',
-    method: 'post',
-    data: { name: $('#question-name').val(), image_url: $('#question-image-url').val() }
-  }
-
-  var happyDays = function(response) {
-    console.log('happy days');
-
-    // var $header = $('<header class="content"><div class="right">14h</div><img class="avatar" src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97200&w=200&h=200" alt=""> DT </header>');
-
-    // var $imageTag = $('<img>').attr('src', response.image_url);
-    // var $starSpan = $('<span>').addClass('star').html('&#9733;');
-    // var $imageDiv = $('<div>').addClass('image').append($imageTag).append($starSpan);
-    // var $contentDiv = $('<div>').addClass('content').html('<h2>' + response.name + '</h2><h4>at GA</h4>') ;
-    // var $footer = $('<footer>').addClass('content').html('<span class="right counter">'+ response.like_count +'</span><span>bookmark</span>');
-
-    // var $newDiv = $('<div>')
-    //   .addClass('ui-card')
-    //   .attr('data-question-id', response.id);
-
-    // $newDiv.append( $header );
-    // $newDiv.append( $imageDiv );
-    // $newDiv.append( $contentDiv );
-    // $newDiv.append( $footer );
-
-    var templateString = $('#card-template').html();
-    var templateFunction = Handlebars.compile(templateString);
-
-    var html = templateFunction({
-      name: response.name,
-      id: response.id,
-      image_url: response.image_url,
-      like_count: response.like_count
-    });
-
-    var $newDiv = $(html);
-
-    $('.question-list').append( $newDiv );
-  }
-
-  var sadDays = function() {
-    console.log('life sucks');
-  }
-
-  $.ajax(settings).done(happyDays).fail(sadDays);
-});
-
-
-$('.question-list').on('click', '.star', function(event) {
-
-  // make an ajax call to /api/likes
-
-  var $uiCard = $(event.target).closest('.ui-card');
-  var questionId = $uiCard.data('question-id');
-
-  var settings = {
-    url: '/api/likes',
-    data: { question_id: questionId },
-    method: 'post'
-  }
-
-  var incrementStarCount = function(response) {
-    console.log(response);
-    var $countSpan = $uiCard.find('footer .right');
-    $countSpan.html( response.like_count );
-  }
-
-  $.ajax(settings).done(incrementStarCount);
-});
-
-</script>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 <% end %>
 
 
@@ -138,9 +32,9 @@ $('.question-list').on('click', '.star', function(event) {
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">x</span>
-    <p>Here's the create a question page</p>
-    Title <input class="std_input">
-    Question <input class="std_input">
+    <h1>Ask a Question</h1>
+    Title: <input class="std_input"><BR />
+    Question: <input class="std_input">
   </div>
 
 </div>
