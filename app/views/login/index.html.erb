@@ -5,7 +5,8 @@
 <%= form_tag '/login', method: 'get' do %>
   <input class="std_input" name='input_code'required>
   <h6>This is found on your venue ticket</h6>
-  <%= @errormessage %>
+    <p><%=@errormessage%></p>
+
   <button class="button">SUBMIT</button>
 <% end %>
 <%#simple form - gem

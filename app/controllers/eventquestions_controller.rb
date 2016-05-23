@@ -7,4 +7,5 @@ class EventquestionsController < ApplicationController
 
   def index
   end
+  
 end

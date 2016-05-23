@@ -20,7 +20,7 @@ Alternatively you may download this software and after running the following com
 1 - Ensure you have both ruby and rails installed. Please visit ruby.org for details.
 2 - Press download to desktop. A Zip file will now be saved to your desktop
 3 - After extracting the ZIP navigate to the directory using terminal or the command line
-4 - 
+4 - Run 'bundle install' in your terminal - This will ensure you have the required ruby gems
 
 **Functionality**
 

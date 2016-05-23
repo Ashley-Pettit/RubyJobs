@@ -1,20 +1,35 @@
 class LoginController < ApplicationController
+
   def index
   end
 
   def new
-    puts params[:input_code]
-    if true
-      #Send the user to the profile page
+    if @user = User.find_by(code: params[:input_code])
+      session[:user_id] = @user.id
       redirect_to '/login/profile'
     else
-      #ADD ERROR MSG AND STAY ON SAME PAGE
+      @errormessage = "Sorry this code is invalid"
+      render :index
     end
   end
 
+  def logout
+    session.clear
+    render :index
+  end
+
   def update
-    #updates the DB HERE
-    redirect_to '/agenda/index'
+    if logged_in?
+      puts 'user was logged in'
+      user = User.find(session[:user_id])
+      user.name = params[:name_input]
+      user.email = params[:email_input]
+      user.save
+      redirect_to '/agenda/index'
+    else
+      puts "User was not logged in. Back to home page"
+      redirect_to '/login'
+    end
   end
 
 end

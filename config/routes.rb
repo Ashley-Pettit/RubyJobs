@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
 
   get '/login' => 'login#new'
+  get '/login/incorrect' => 'login#login_incorrect'
   patch '/login' => 'login#update'
   get '/login/profile' => 'login#profile'
+  get 'logout' => 'login#logout'
 
   get '/agenda/index' => 'agenda#index'
   get 'event_index' => 'eventquestions#index'

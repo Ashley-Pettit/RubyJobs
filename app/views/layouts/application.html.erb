@@ -9,9 +9,11 @@
 <body>
   <header>
     <h2><%= link_to 'Questionable', root_path, class:"header_left" %> </h2>
-    <h3><%= link_to 'Logout', root_path, class:"header_right" %></h3>
-    <h3><%= link_to 'Schedule', agenda_index_path, class:"header_right" %></h3>
-    <h3><%= link_to 'My Profile', edit_profile_path, class:"header_right" %></h3>
+    <% if logged_in? %>
+      <h3><%= link_to 'Logout', logout_path, class:"header_right" %></h3>
+      <h3><%= link_to 'Schedule', agenda_index_path, class:"header_right" %></h3>
+      <h3><%= link_to 'My Profile', edit_profile_path, class:"header_right" %></h3>
+    <% end %>
     <h3><%= link_to 'What is Questionable', about_path, class:"header_right" %></h3>
     <hr class="hr">
   </header>
