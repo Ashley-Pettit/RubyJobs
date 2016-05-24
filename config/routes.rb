@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'logout' => 'login#logout'
 
   get '/agenda/index' => 'agenda#index'
-  get 'event_index' => 'questions#index'
+  get '/question/index' => 'questions#index'
   get 'edit_profile' => 'login#edit'
 
   get 'about' => 'about#index'

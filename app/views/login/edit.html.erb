@@ -4,8 +4,8 @@
 
 <%= form_tag '/login', method: 'patch' do %>
   <label>Name:</label>
-  <input class="std_input" name='name_input'><BR />
+  <input class="std_input" name='name_input' placeholder="Your Name" autofocus ><BR />
   <label>Email:</label>
-  <input class="std_input" name='email_input'><BR />
+  <input class="std_input" name='email_input' placeholder="Your Email"><BR />
   <button class="button">UPDATE</button>
 <% end %>

@@ -33,37 +33,20 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">x</span>
-    <h1>Ask a Question</h1>
-    <label>Title: </label>
-    <input class="std_input" name='question_title'><BR />
-    <label>Question:</label>
-    <textarea class="std_input_xl" name='question_body'><BR />
-    <div>Please check if a similar question has already been asked.</div>
-    <div>Asking a question will cost you one of your three votes </div>
+    <h1>Ask a Question</h1><BR />
+
+    <%= form_tag '/login', method: 'patch' do %>
+      <label>Title: </label>
+      <input class="std_input" name='question_title' placeholder="Question Title" autofocus required><BR />
+      <label>Question:</label>
+      <textarea rows="4" cols="50" class="std_input_xl" name='question_body' placeholder="Question in detail" required></textarea><BR />
+      <button class="button" id="submit_question">Submit</button>
+    <% end %>
+
+    <ol>
+      <li><h6>Please check if a similar question has already been asked.</h6></li>
+      <li><h6>Asking a question will use one of your three votes </h6></li>
+    </ol>
   </div>
 
 </div>
-
-<!-- script here to prevent js running too early -->
-<script>
-var modal = document.getElementById('myModal');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
-
-$('#myBtn').click(function() {
-    modal.style.display = "block";
-});
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-};
-</script>

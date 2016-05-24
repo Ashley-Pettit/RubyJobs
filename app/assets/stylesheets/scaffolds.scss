@@ -1,3 +1,5 @@
+// RESET START
+
 *{
   padding:0px;
   margin:0px;
@@ -5,70 +7,89 @@
   list-style: none
 }
 
+html {
+  height: 100%;
+}
+
+// RESET END  BUTTON START
+
+button {
+  min-height:2rem;
+  min-width:6rem;
+}
+
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   padding: 1rem 2rem;
+   margin:2rem;
+   border-radius: 14px;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffffff;
+   font-size: 1rem;
+   font-family: "Lucida Sans Unicode", "Lucida Grande";
+   text-decoration: none;
+   vertical-align: top;
+   }
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+.std_input {
+  font-size:.8em;
+  margin-bottom: 1rem;
+  height:1.2rem;
+  border-radius: .2rem;
+  padding:.2rem;
+}
+
+// BUTTON END
+
+header {
+  padding:.1rem;
+  background-color: black;
+  color:yellow;
+  font-family: "Lucida Sans Unicode", "Lucida Grande";
+  margin-bottom:2.5em;
+}
+
+footer {
+  background-color: black;
+  color:yellow;
+  font-family: "Lucida Sans Unicode", "Lucida Grande";
+  height:4em;
+}
+
 li {
   margin-left:1.2rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 1rem;
+.container > h1, .container > h2, .container > h3, .container > h4, .container > h5, .container > h6, .container > p, .container > div {
+  margin-bottom: 1em;
 }
 
-h2 {
-  margin-top:.8rem;
-}
-
-/* MODEL START */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* MODEL END */
 
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 15px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande";
+  // font-size: 15px;
   background-color: tomato;
+  min-height:100%;
+  height:100%;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 11px;
-  line-height: 11px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande";
+  // font-size: 11px;
+  // line-height: 11px;
 }
 
 
@@ -86,8 +107,6 @@ p, ol, ul, td {
   text-decoration:none;
 }
 
-
-
 .header_left {
   padding: 1rem;
   float: left;
@@ -104,56 +123,9 @@ hr {
   margin-left:2.5rem;
 }
 
-header {
-  margin-bottom:2.5rem;
-}
-
-header > h3{
-  cursor: pointer;
-}
-
 .input_small{
-  width:10rem;
+  width:10em;
   color:red;
-}
-
-button {
-  min-height:2rem;
-  min-width:6rem;
-}
-
-p, div {
-  margin-bottom:1rem;
-}
-
-
-.button {
-   border-top: 1px solid #96d1f8;
-   background: #65a9d7;
-   padding: 1rem 2rem;
-   margin:2rem;
-   border-radius: 14px;
-   box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: #ffffff;
-   font-size: 1rem;
-   font-family: Georgia, serif;
-   text-decoration: none;
-   vertical-align: top;
-   }
-.button:hover {
-   border-top-color: #28597a;
-   background: #28597a;
-   color: #ccc;
-   }
-.button:active {
-   border-top-color: #1b435e;
-   background: #1b435e;
-   }
-
-.std_input {
-  font-size:1rem;
-  margin-bottom: 1rem;
 }
 
 .agenda_item{
@@ -167,21 +139,15 @@ p, div {
   font-variant: small-caps;
 }
 
-
-header {
-  padding:.1rem;
-  background-color: black;
-  color:yellow;
-  font-family:fantasy, monospace;;
+header > h3, footer > h3{
+  cursor: pointer;
 }
 
-footer {
-  padding:0rem;
-  background-color: black;
-  color:yellow;
-  font-family:fantasy, monospace;;
+header > h2 {
+  margin-top:.4rem;
 }
 
 .container {
   width:70%;
+  height:72%;
 }
