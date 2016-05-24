@@ -79,6 +79,15 @@ p, ol, ul, td {
   text-decoration:none;
 }
 
+.footer_right {
+  padding: 1rem;
+  float: right;
+  color:grey;
+  text-decoration:none;
+}
+
+
+
 .header_left {
   padding: 1rem;
   float: left;
@@ -161,6 +170,13 @@ p, div {
 
 header {
   padding:.1rem;
+  background-color: black;
+  color:yellow;
+  font-family:fantasy, monospace;;
+}
+
+footer {
+  padding:0rem;
   background-color: black;
   color:yellow;
   font-family:fantasy, monospace;;
