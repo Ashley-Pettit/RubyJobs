@@ -28,7 +28,11 @@
   <hr class="hr">
   <% if logged_in? %>
   <h3><%= link_to 'Logout', logout_path, class:"footer_right" %></h3>
-  <h3><%= link_to 'My Profile', edit_profile_path, class:"footer_right" %></h3>
+  <% end %>
+  <% if find_user_code != 'adminxxx' %>
+    <h3><%= link_to 'My Profile', edit_profile_path, class:"footer_right" %></h3>
+  <% else %>
+    <h3><%= link_to 'Admin', admin_path, class:"footer_right" %></h3>
   <% end %>
 </footer>
 </html>
