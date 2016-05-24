@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   def find_user_name
     if logged_in?
-      User.find_by(id: session[:user_id]).name
+       User.find_by(id: session[:user_id]).name ||= "Anonymous"
     end
   end
 
