@@ -1,7 +1,17 @@
 <%# Admin page %>
 
-<h1>Administration</h1>
+<h1>Administration Page</h1>
 
-<h2>Add an event</h2>
+<%= form_tag '/event_new', method: 'patch' do %>
+  <button><h2>Add an event</h2></button><br>
+<% end %>
 
-<h2>Add an event</h2>
+<h2>Current Events List</h2>
+
+<% @events.each do |event| %>
+
+  <h3><%= event.title %></h3>
+  <p><%= event.speaker %></p>
+  <p><%= event.description %></p>
+
+<% end %>
