@@ -1,5 +1,5 @@
 
-<h1>Daniel Tsui - Why rails is so great</h1> <div>This needs to be passed</div>
+<h1>Daniel Tsui - Why rails is so great- 10:30 </h1>
 
 <p>
   A for loop goes on this page that iterates through questions
@@ -35,9 +35,16 @@
     <span class="close">x</span>
     <h1>Ask a Question</h1>
     <label>Title: </label>
-    <input class="std_input" name='name_input'><BR />
+    <input class="std_input" name='question_title'><BR />
     <label>Question:</label>
-    <input class="std_input" name='email_input'><BR />
+    <textarea class="std_input_xl" name='question_body'><BR />
+    <div>Please check if a similar question has already been asked.</div>
+    <div>Asking a question will cost you one of your three votes </div>
   </div>
 
 </div>
+
+<!-- script here to prevent js running too early -->
+<script>
+  model();
+</script>
