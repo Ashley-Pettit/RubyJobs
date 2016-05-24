@@ -6,6 +6,7 @@ class LoginController < ApplicationController
   def new
     if @user = User.find_by(code: params[:input_code])
       session[:user_id] = @user.id
+      @user_name = find_user_name
       redirect_to '/login/profile'
     else
       @errormessage = "Sorry this code is invalid"
@@ -25,10 +26,10 @@ class LoginController < ApplicationController
       user.name = params[:name_input]
       user.email = params[:email_input]
       user.save
-      redirect_to '/agenda/index'
+      redirect_to '/agenda/index' #should this be render?
     else
       puts "User was not logged in. Back to home page"
-      redirect_to '/login'
+      redirect_to '/login' #should this be render or redirect?
     end
   end
 

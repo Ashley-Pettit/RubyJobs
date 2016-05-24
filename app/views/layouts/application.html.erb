@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,7 @@
 </head>
 <body>
   <header>
-    <h2><%= link_to 'Questionable', root_path, class:"header_left" %> </h2>
+    <h2><%= link_to "Questionable #{prepend_dash_to_user_name}", root_path, class:"header_left", id:"title" %></h2>
     <% if logged_in? %>
       <h3><%= link_to 'Logout', logout_path, class:"header_right" %></h3>
       <h3><%= link_to 'Schedule', agenda_index_path, class:"header_right" %></h3>
