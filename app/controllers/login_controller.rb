@@ -5,6 +5,10 @@ class LoginController < ApplicationController
 
   def new
     if @user = User.find_by(code: params[:input_code])
+      if @user.code == 'adminxxx'
+        session[:user_id] = @user.id
+        redirect_to '/agenda/index' and return
+      end
       session[:user_id] = @user.id
       @user_name = find_user_name
       redirect_to '/login/profile'

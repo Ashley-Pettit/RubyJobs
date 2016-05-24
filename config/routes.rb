@@ -14,4 +14,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'about#index'
 
+  get '/admin' => 'admin#index'
+  patch '/event_new' => 'admin#new'
+
 end
