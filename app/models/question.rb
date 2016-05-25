@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
   belongs_to :user
   has_many :likes
-  belongs_to :event
+  belongs_to :events
 end
