@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'login#index'
 
+  root 'login#index'
 
   get '/login' => 'login#new'
   get '/login/incorrect' => 'login#login_incorrect'
@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   get '/event/show/:id' => 'admin#show'
   patch '/event/edit/:id' => 'admin#edit'
   delete '/event/edit/:id' => 'admin#delete'
+  get '/event/edit/:id' => 'admin#edit'
 
 end

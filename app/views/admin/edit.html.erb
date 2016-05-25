@@ -1,1 +1,11 @@
 <h2>Edit Page</h2>
+
+<%= form_tag "/edit/#{@event.id}", method: 'patch' do %>
+  <label>Name:</label>
+  <input class="std_input" name='event_title_input' value="<%= @event.title %>"><BR />
+  <label>Description:</label>
+  <input class="std_input" name='description_input' value="<%= @event.description %>"><BR />
+  <label>Speaker:</label>
+  <input class="std_input" name='speaker_input' value="<%= @event.speaker %>"><BR />
+  <button class="button">Save Changes</button>
+<% end %>

@@ -8,12 +8,17 @@
 
 <h2>Current Events List</h2>
 
-<% @events.each do |event| %>
+<% if @events %>
+  <% @events.each do |event| %>
 
-  <a href="/event/show/<%= event.id %>">
-    <h3><%= event.title %></h3>
-    <p><%= event.speaker %></p>
-    <p><%= event.description %></p>
-  </a>
+    <a href="/event/show/<%= event.id %>">
+      <h3><%= event.title %></h3>
+      <p><%= event.speaker %></p>
+      <p><%= event.description %></p>
+    </a>
 
+  <% end %>
+<% else %>
+  <h3>There are no events to show</h3>
+    <% raise "xxxxxxxxd" %>
 <% end %>

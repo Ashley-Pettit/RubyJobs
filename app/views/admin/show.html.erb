@@ -2,10 +2,10 @@
 <p><%= @event.speaker %></p>
 <p><%= @event.description %></p>
 
-<%= form_tag '/event/edit/:id', method: 'patch' do %>
+<%= form_tag "/event/edit/#{@event.id}", method: 'patch' do %>
   <button><h2>Edit Event</h2></button><br>
 <% end %>
 
-<%= form_tag '/event/edit/:id', method: 'delete' do %>
+<%= form_tag "/event/edit/#{@event.id}", method: 'delete' do %>
   <button><h2>Delete Event</h2></button><br>
 <% end %>
