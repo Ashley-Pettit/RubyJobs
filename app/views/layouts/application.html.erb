@@ -1,3 +1,4 @@
+<%# TEMPLATE PAGE %>
 
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,7 @@
       <h3><%= link_to 'Schedule', agenda_index_path, class:"header_right" %></h3>
     <% end %>
     <h3><%= link_to 'What is Questionable', about_path, class:"header_right" %></h3>
-    <hr class="hr">
+    <!-- <hr class="hr"> -->
   </header>
 
   <div class="container">
@@ -23,16 +24,18 @@
 
   </div>
 
-</body>
-<footer>
-  <hr class="hr">
-  <% if logged_in? %>
-    <h3><%= link_to 'Logout', logout_path, class:"footer_right" %></h3>
-    <% if find_user_code == 'adminxxx' %>
-      <h3><%= link_to 'Admin', admin_path, class:"footer_right" %></h3>
-    <% elsif find_user_code != 'adminxxx' %>
-      <h3><%= link_to 'My Profile', edit_profile_path, class:"footer_right" %></h3>
+  <footer>
+    <!-- <hr class="hr"> -->
+    <% if logged_in? %>
+      <h3><%= link_to 'Logout', logout_path, class:"footer_right" %></h3>
+      <% if find_user_code == 'adminxxx' %>
+        <h3><%= link_to 'Admin', admin_path, class:"footer_right" %></h3>
+      <% elsif find_user_code != 'adminxxx' %>
+        <h3><%= link_to 'My Profile', edit_profile_path, class:"footer_right" %></h3>
+      <% end %>
     <% end %>
-  <% end %>
-</footer>
+  </footer>
+
+</body>
+
 </html>
