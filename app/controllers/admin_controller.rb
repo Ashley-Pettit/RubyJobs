@@ -12,4 +12,17 @@ class AdminController < ApplicationController
     event.save
   end
 
+  def show
+    @event = Event.find_by_id(params[:id])
+  end
+
+  def edit
+    @event = Event.find_by_id(params[:id])
+  end
+
+  def delete
+    event = Event.find_by_id(params[:id])
+    event.destroy
+  end
+
 end
