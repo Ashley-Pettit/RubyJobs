@@ -10,10 +10,10 @@
 
 <% if @questions %>
   <% @questions.each do |question| %>
-
-      <p><%= question.description %> - Asked by
-      <%= @users.find_by(id: question.user_id).name %> </p>
-
+      <% if question.event.to_i == @event.id %>
+        <p style ="background-color:mistyrose"><%= question.description %> - Asked by
+        <%= @users.find_by(id: question.user_id).name %> </p>
+      <% end %>
   <% end %>
 <% else %>
   <h3>No-one has asked a question yet! Be the first to ask one below!</h3>

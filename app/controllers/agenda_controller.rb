@@ -6,6 +6,7 @@ class AgendaController < ApplicationController
 
   def show
     @event = Event.find_by_id(params[:id])
+    @events = Event.all
     @questions = Question.all
     @users = User.all
   end

@@ -9,17 +9,14 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    event = Event.find_by(id: params[:id]).id
     question = Question.new
+    question.event = Event.find_by_id(params[:id]).id
     question.description = params[:question_body]
-    question.event = event
     question.user_id = session[:user_id]
     question.question_likes = 0
     question.save
     redirect_to "/event/#{params[:id]}"
   end
-
-
 
 
 end
