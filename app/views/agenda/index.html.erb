@@ -4,21 +4,8 @@
 
 <% @events.each do |event| %>
 
-  <h3 id="event_title"><%= "#{event.title} - #{event.speaker} - 10:30" %> </h3>
+  <a href="/event/<%= event.id %>">
+  <h3 id="event_title"><%= "#{event.title} - #{event.speaker} - 10:30" %> </h3></a>
   <div style="margin-left:2rem"><%= event.description %></div>
 
-<% end %>
-
-<% if false %>
-<ol>
-  <li class="agenda_item"> <%= link_to 'DANIEL TSUI - WHY CODING IS SO AMAZING - 9:30', '/question/index' %> </li>
-
-  <li class="agenda_item"><%= link_to 'JONATHAN - WHY LINKEDIN IS > LIFE - 11:30', '/question/index' %></li>
-
-  <li class="agenda_item"><%= link_to 'MJ - WHY COURSE > LIFE. - 12:30', '/question/index' %></li>
-
-  <li class="agenda_item"><%= link_to 'MARTY - WHY TO GOOGLE ANY MEDICAL CONDITION - 2:30', '/question/index' %></li>
-
-  <li class="agenda_item"><%= link_to 'MATT - BEER, WARMUPS AND WORDPRESS - 3:30', '/question/index' %></li>
-</ol>
 <% end %>
