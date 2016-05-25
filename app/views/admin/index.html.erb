@@ -10,8 +10,10 @@
 
 <% @events.each do |event| %>
 
-  <h3><%= event.title %></h3>
-  <p><%= event.speaker %></p>
-  <p><%= event.description %></p>
+  <a href="/event/show/<%= event.id %>">
+    <h3><%= event.title %></h3>
+    <p><%= event.speaker %></p>
+    <p><%= event.description %></p>
+  </a>
 
 <% end %>
