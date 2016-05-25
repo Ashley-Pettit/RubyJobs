@@ -8,11 +8,10 @@
 <button class="btn-sml" id="sort_by_trending">Trending</button>
 <button class="btn-sml" id="sort_by_most_liked">Most Liked</button><BR />
 
-
 <% if @questions %>
   <% @questions.each do |question| %>
-      <% if 14 == @event.id %>
-        <p><%= question.description %> - Asked by
+      <% if question.event.to_i == @event.id %>
+        <p style ="background-color:mistyrose"><%= question.description %> - Asked by
         <%= @users.find_by(id: question.user_id).name %> </p>
       <% end %>
   <% end %>
