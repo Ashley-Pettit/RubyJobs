@@ -14,6 +14,7 @@ class QuestionsController < ApplicationController
     question.description = params[:question_body]
     question.event = event
     question.user_id = session[:user_id]
+    question.question_likes = 0
     question.save
     redirect_to "/event/#{params[:id]}"
   end
