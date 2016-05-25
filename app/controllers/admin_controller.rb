@@ -5,11 +5,16 @@ class AdminController < ApplicationController
   end
 
   def new
+
+  end
+
+  def create
     event = Event.new
     event.title = params[:event_title_input]
     event.description = params[:description_input]
     event.speaker = params[:speaker_input]
     event.save
+    render :new
   end
 
   def show

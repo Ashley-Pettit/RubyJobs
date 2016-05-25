@@ -22,6 +22,16 @@ body {
 	background-color: #F5F3EE;
 }
 
+#event_title{
+	margin-bottom:-.1rem;
+	color:#7D1935;
+	cursor:pointer;
+}
+
+#event_title:hover{
+	text-decoration:underline;
+}
+
 .container {
 	margin-left:5%;
   width:55%;

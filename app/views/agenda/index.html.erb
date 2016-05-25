@@ -2,17 +2,14 @@
 
 <h1>WDI6 SUMMIT- Today's Agenda</h1>
 
-<% if false %>
 <% @events.each do |event| %>
 
-  <h3><%= event.title %></h3>
-  <p><%= event.speaker %></p>
-  <p><%= event.description %></p>
+  <h3 id="event_title"><%= "#{event.title} - #{event.speaker} - 10:30" %> </h3>
+  <div style="margin-left:2rem"><%= event.description %></div>
 
 <% end %>
-<% end %>
 
-
+<% if false %>
 <ol>
   <li class="agenda_item"> <%= link_to 'DANIEL TSUI - WHY CODING IS SO AMAZING - 9:30', '/question/index' %> </li>
 
@@ -24,3 +21,4 @@
 
   <li class="agenda_item"><%= link_to 'MATT - BEER, WARMUPS AND WORDPRESS - 3:30', '/question/index' %></li>
 </ol>
+<% end %>
