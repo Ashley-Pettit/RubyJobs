@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   def destroy_questions
-    questions = Questions.all
+    questions = Question.all
     questions.each do |question|
       question.destroy
     end

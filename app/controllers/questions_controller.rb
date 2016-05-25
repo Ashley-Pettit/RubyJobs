@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
 
   def create
     question = Question.new
-    question.event = Event.find_by_id(params[:id])
+    question.event = Event.find_by_id(params[:id]).id
     question.description = params[:question_body]
     question.user_id = session[:user_id]
     question.save
