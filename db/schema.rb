@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20160524070104) do
     t.string   "speaker"
     t.string   "description"
     t.string   "user_id"
-    t.string   "event_id"
+    t.string   "event_id" #NOT IN USE
     t.string   "question_id"
     t.string   "title"
   end

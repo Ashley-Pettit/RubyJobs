@@ -15,11 +15,16 @@ Rails.application.routes.draw do
 
   get 'about' => 'about#index'
 
+  #ADMIN ROUTES
   get '/admin' => 'admin#index'
   patch '/event_new' => 'admin#create'
   get '/event/show/:id' => 'admin#show'
   patch '/event/edit/:id' => 'admin#edit'
   delete '/event/edit/:id' => 'admin#delete'
   get '/event/edit/:id' => 'admin#edit'
+
+  get '/event/:id' => 'agenda#show'
+  
+  post '/event/:id' => 'questions#create'
 
 end

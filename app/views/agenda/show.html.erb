@@ -1,23 +1,23 @@
+<%# EVENT QUESTIONS PAGE %>
 
-<h1>Daniel Tsui - Why rails is so great- 10:30 </h1>
+<h2 style="margin-top:1.5rem"><%= "#{@event.title} - #{@event.speaker} - 10:30" %> </h2>
+<div style="margin-top:1.5rem"><%= @event.description %></div>
 
 <button class="btn-sml" id="sort_by_recent">Randomize</button>
 <button class="btn-sml" id="sort_by_trending">Recently Asked</button>
 <button class="btn-sml" id="sort_by_trending">Trending</button>
-<button class="btn-sml" id="sort_by_most_liked">Most Liked</button>
+<button class="btn-sml" id="sort_by_most_liked">Most Liked</button><BR />
 
-<p>
-  A for loop goes on this page that iterates through questions
-</p>
+<% if @questions %>
+  <% @questions.each do |question| %>
 
-<% @events.each do |event| %>
+      <p><%= question.description %> - Asked by
+      <%= @users.find_by(id: question.user_id).name %> </p>
 
-  <h3><%= event.title %></h3>
-  <p><%= event.speaker %></p>
-  <p><%= event.description %></p>
-
+  <% end %>
+<% else %>
+  <h3>No-one has asked a question yet! Be the first to ask one below!</h3>
 <% end %>
-
 
 <button id="myBtn" class="button">Ask a question</button>
 
@@ -29,9 +29,7 @@
     <span class="close">x</span>
     <h1>Ask a Question</h1><BR />
 
-    <%= form_tag '/login', method: 'patch' do %>
-      <label>Title: </label>
-      <input class="std_input" name='question_title' placeholder="Question Title" autofocus required><BR />
+    <%= form_tag "/event/#{@event.id}", method: 'post' do %>
       <label>Question:</label>
       <textarea rows="4" cols="50" class="std_input_xl" name='question_body' placeholder="Question in detail" required></textarea><BR />
       <button class="button" id="submit_question">Submit</button>
