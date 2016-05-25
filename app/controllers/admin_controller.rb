@@ -23,11 +23,13 @@ class AdminController < ApplicationController
 
   def edit
     @event = Event.find_by_id(params[:id])
+    redirect_to '/admin'
   end
 
   def delete
     event = Event.find_by_id(params[:id])
     event.destroy
+    redirect_to '/admin'
   end
 
 end
