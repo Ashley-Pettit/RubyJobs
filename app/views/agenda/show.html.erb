@@ -12,7 +12,7 @@
 <% if @questions %>
   <% @questions.each do |question| %>
       <% if question.event.to_i == @event.id %>
-        <p style ="background-color:yellow"><%= question.description %> - Asked by
+        <p style ="background-color:rgba(125, 25, 53, 0.15)"><%= question.description %> - Asked by
           <%= @users.find_by(id: question.user_id).name %>
           <i id="thumbsup" class="fa fa-thumbs-o-up" aria-hidden="true"></i>
           <span id="likecount" style="float:right"> <%= question.question_likes %></span>
