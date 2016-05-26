@@ -7,12 +7,12 @@
 <button class="btn-sml" id="sort_by_trending">Recently Asked</button>
 <button class="btn-sml" id="sort_by_trending">Trending</button>
 <button class="btn-sml" id="sort_by_most_liked">Most Liked</button>
-<BR />
+<BR /><BR />
 
 <% if @questions %>
   <% @questions.each do |question| %>
-      <% if question.event.to_i == @event.id %>
-        <p style ="background-color:mistyrose"><%= question.description %> - Asked by
+      <% if question.event.to_i == @event.id? %>
+        <p style ="background-color:yellow"><%= question.description %> - Asked by
         <%= @users.find_by(id: question.user_id).name %> <i id="thumbsup" class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span id="likecount" style="float:right"> <%= @question_likecount %>  </span></p>
       <% end %>
   <% end %>
