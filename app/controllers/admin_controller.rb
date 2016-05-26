@@ -24,11 +24,18 @@ class AdminController < ApplicationController
 
   def edit
     @event = Event.find_by_id(params[:id])
-    event = Event.find_by_id(params[:id])
+  end
+
+  def update
+    @events = Event.all
+    @event = Event.find_by_id(params[:id])
+    event = Event.find_by_a
+    id(params[:id])
     event.title = params[:event_title_input]
     event.description = params[:description_input]
     event.speaker = params[:speaker_input]
-    redirect_to '/admin'
+    event.save
+    render :index
   end
 
   def delete

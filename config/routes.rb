@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   get '/admin' => 'admin#index'
   patch '/event_new' => 'admin#create'
   get '/event/show/:id' => 'admin#show'
-  patch '/event/edit/:id' => 'admin#edit'
+  get '/event/edit/:id' => 'admin#edit'
+  patch '/event/edit/:id' => 'admin#update'
   delete '/event/edit/:id' => 'admin#delete'
   get '/event/edit/:id' => 'admin#edit'
 

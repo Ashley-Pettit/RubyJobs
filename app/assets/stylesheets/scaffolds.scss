@@ -8,8 +8,34 @@
 	color: #404040;
 }
 
-html, body {
-  height: 100%;
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+.container {
+  padding-bottom:50px; /* Height of the footer element */
+	position:relative;
+}
+
+.footer_right {
+  padding: .8%;
+  float: right;
+  color:#F5F3EE;
+  text-decoration:none;
+}
+
+footer {
+  background-color: #7D1935;
+  color:yellow;
+  font-family: "Lucida Sans Unicode", "Lucida Grande";
+	width:100%;
+  height:50px;
+	position:fixed;
+	bottom:0;
+	left:0;
 }
 
 // RESET END // START CORE LAYOUT
@@ -18,7 +44,6 @@ body {
   background-color: #fff;
   color: #333;
   font-family: "Lucida Sans Unicode", "Lucida Grande";
-  // background-color: #74AFAD;
 	background-color: #F5F3EE;
 }
 
@@ -45,7 +70,6 @@ body {
 .container {
 	margin-left:5%;
   width:55%;
-  height:81%;
 }
 
 header {
@@ -57,14 +81,6 @@ header {
 	margin-bottom: 1rem;
 }
 
-footer {
-  background-color: #7D1935;
-  color:yellow;
-  font-family: "Lucida Sans Unicode", "Lucida Grande";
-  height:8%;
-	margin-top:-1rem;
-}
-
 .header_right {
   padding: 1%;
   float: right;
@@ -73,15 +89,8 @@ footer {
 }
 
 .header_left {
-  padding: 1%;
+  padding: .8%;
   float: left;
-  color:#F5F3EE;
-  text-decoration:none;
-}
-
-.footer_right {
-  padding: 1%;
-  float: right;
   color:#F5F3EE;
   text-decoration:none;
 }
@@ -178,8 +187,6 @@ footer {
   padding:.2rem;
 }
 
-
-
 li {
   margin-left:1.2rem;
 }
@@ -198,13 +205,6 @@ header > h2 {
 
 p, ol, ul, td {
   font-family: "Lucida Sans Unicode", "Lucida Grande";
-}
-
-
-
-hr {
-  width:100%;
-  color:black;
 }
 
 .input_small{

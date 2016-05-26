@@ -1,11 +1,9 @@
 <%# Admin page %>
-
-<h2>Administration - Add or edit events</h1>
-
-
 <%= form_tag '/event_new', method: 'get' do %>
-  <button class="button"><h2>Add an event</h2></button><br>
+  <button class="button" style="float:right">Add an event</button><br>
 <% end %>
+
+<h2>Administration - Add or edit events</h1><BR />
 
 <h2>Current Events List</h2>
 
@@ -14,10 +12,8 @@
   <% @events.each do |event| %>
 
     <a href="/event/show/<%= event.id %>">
-      <h3><%= event.title %></h3>
-      <p><%= event.speaker %></p>
-      <p><%= event.description %></p>
-    </a>
+    <h3 id="event_title"><%= "#{event.title} - #{event.speaker} - 10:30" %> </h3></a>
+    <div style="margin-left:2rem"><%= event.description %></div>
 
   <% end %>
 <% else %>

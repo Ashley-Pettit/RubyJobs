@@ -3,9 +3,9 @@
 <p><%= @event.description %></p>
 
 <%= form_tag "/event/edit/#{@event.id}", method: 'get' do %>
-  <button><h2>Edit Event</h2></button><br>
+  <button class="button" style="display:inline-block">Edit Event</button><br>
 <% end %>
 
 <%= form_tag "/event/edit/#{@event.id}", method: 'delete' do %>
-  <button><h2>Delete Event</h2></button><br>
+  <button class="button" style="display:inline-block">Delete Event</button><br>
 <% end %>

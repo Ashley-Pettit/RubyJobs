@@ -7,10 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   def destroy_questions
-    questions = Question.all
-    questions.each do |question|
-      question.destroy
-    end
+    Question.all.destroy
   end
 
   def find_user_name

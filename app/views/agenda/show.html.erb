@@ -34,15 +34,12 @@
     <h1>Ask a Question</h1><BR />
 
     <%= form_tag "/event/#{@event.id}", method: 'post' do %>
-      <label>Question:</label>
-      <textarea autofocus rows="4" cols="50" class="std_input_xl" name='question_body' placeholder="Question in detail" required></textarea><BR />
+      <textarea autofocus rows="4" cols="50" class="std_input_xl" name='question_body' placeholder="Write your question here" required></textarea><BR />
       <button class="button" id="submit_question">Submit</button>
     <% end %>
 
-    <ol>
-      <li><h6>Please check if a similar question has already been asked.</h6></li>
-      <li><h6>Asking a question will use one of your three votes </h6></li>
-    </ol>
+      <h6>Please check if a similar question has already been asked.</h6>
+      <h6>Asking a question will use one of your three votes </h6>
   </div>
 
 </div>

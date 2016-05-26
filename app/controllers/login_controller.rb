@@ -18,6 +18,14 @@ class LoginController < ApplicationController
     end
   end
 
+  def profile
+    @user = User.find(session[:user_id])
+  end
+
+  def edit
+    @user = User.find(session[:user_id])
+  end
+
   def logout
     session.clear
     render :index
