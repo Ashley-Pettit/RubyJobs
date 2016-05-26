@@ -4,7 +4,7 @@
 
 <% @events.each do |event| %>
   <a href="/event/<%= event.id %>">
-  <h3 id="event_title"><%= "#{event.title} - #{event.speaker} - #{@event.time}" %> </h3></a>
+  <h3 id="event_title"><%= "#{event.title} - #{event.speaker} - #{event.time}" %> </h3></a>
   <div style="margin-left:2rem"><%= event.description %></div>
 
 <% end %>
