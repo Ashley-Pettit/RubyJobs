@@ -14,7 +14,8 @@ class AdminController < ApplicationController
     event.description = params[:description_input]
     event.speaker = params[:speaker_input]
     event.save
-    render :new
+    @events = Event.all
+    render :index
   end
 
   def show
@@ -23,6 +24,10 @@ class AdminController < ApplicationController
 
   def edit
     @event = Event.find_by_id(params[:id])
+    event = Event.find_by_id(params[:id])
+    event.title = params[:event_title_input]
+    event.description = params[:description_input]
+    event.speaker = params[:speaker_input]
     redirect_to '/admin'
   end
 

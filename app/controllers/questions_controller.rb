@@ -32,7 +32,7 @@ class QuestionsController < ApplicationController
 
   def trending
     event_id = Event.find_by_id(params[:id]).id
-    # need an algorithm that balances time and likes
+    #number of likes in last 5 minutes
   end
 
   def most

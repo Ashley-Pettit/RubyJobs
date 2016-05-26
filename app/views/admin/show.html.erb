@@ -2,7 +2,7 @@
 <p><%= @event.speaker %></p>
 <p><%= @event.description %></p>
 
-<%= form_tag "/event/edit/#{@event.id}", method: 'patch' do %>
+<%= form_tag "/event/edit/#{@event.id}", method: 'get' do %>
   <button><h2>Edit Event</h2></button><br>
 <% end %>
 

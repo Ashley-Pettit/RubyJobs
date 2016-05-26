@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get '/event/edit/:id' => 'admin#edit'
 
   get '/event/:id' => 'agenda#show'
-  
+
   post '/event/:id' => 'questions#create'
 
 end

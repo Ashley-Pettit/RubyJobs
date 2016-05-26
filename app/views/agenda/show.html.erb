@@ -11,9 +11,12 @@
 
 <% if @questions %>
   <% @questions.each do |question| %>
-      <% if question.event.to_i == @event.id? %>
+      <% if question.event.to_i == @event.id %>
         <p style ="background-color:yellow"><%= question.description %> - Asked by
-        <%= @users.find_by(id: question.user_id).name %> <i id="thumbsup" class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span id="likecount" style="float:right"> <%= @question_likecount %>  </span></p>
+          <%= @users.find_by(id: question.user_id).name %>
+          <i id="thumbsup" class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+          <span id="likecount" style="float:right"> <%= question.question_likes %></span>
+        </p>
       <% end %>
   <% end %>
 <% else %>
@@ -32,7 +35,7 @@
 
     <%= form_tag "/event/#{@event.id}", method: 'post' do %>
       <label>Question:</label>
-      <textarea rows="4" cols="50" class="std_input_xl" name='question_body' placeholder="Question in detail" required></textarea><BR />
+      <textarea autofocus rows="4" cols="50" class="std_input_xl" name='question_body' placeholder="Question in detail" required></textarea><BR />
       <button class="button" id="submit_question">Submit</button>
     <% end %>
 
