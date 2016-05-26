@@ -32,6 +32,16 @@ body {
 	text-decoration:underline;
 }
 
+#thumbsup {
+  float:right;
+  padding:.2rem;
+  cursor:pointer;
+}
+
+#thumbsup:hover {
+  background-color: lightgreen;
+}
+
 .container {
 	margin-left:5%;
   width:55%;

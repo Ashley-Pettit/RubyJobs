@@ -9,6 +9,12 @@ class AgendaController < ApplicationController
     @events = Event.all
     @questions = Question.all
     @users = User.all
+    @question_likecount = 1
+    # @question_likecount = Question.find_by_id(params[:id]).likes
+
+    # $('#thumbsup').click(function() {
+    #   @question_likecount += 1
+    # });
   end
 
   def create
