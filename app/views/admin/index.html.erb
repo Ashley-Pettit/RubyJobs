@@ -9,7 +9,8 @@
 
 <h2>Current Events List</h2>
 
-<% if @events %>
+<% if @events.length > 0 %>
+
   <% @events.each do |event| %>
 
     <a href="/event/show/<%= event.id %>">
