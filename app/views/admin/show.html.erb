@@ -1,6 +1,6 @@
 <h2>Would you like to edit this event?</h2>
 
-<h3 id="event_title"><%= "#{@event.title} - #{@event.speaker} - 10:30" %> </h3></a>
+<h3 id="event_title"><%= "#{@event.title} - #{@event.speaker} - #{@event.time}" %> </h3></a>
 <div style="margin-left:2rem"><%= @event.description %></div>
 
 <%= form_tag "/event/edit/#{@event.id}", method: 'get' do %>

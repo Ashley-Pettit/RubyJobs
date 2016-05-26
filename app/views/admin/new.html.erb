@@ -1,11 +1,13 @@
 <h1>Add An Event</h1>
 
 <%= form_tag '/event_new', method: 'patch' do %>
-  <label>Name:</label><BR />
+  <label>Title:</label><BR />
   <input class="std_input" name='event_title_input' autofocus required><BR />
-  <label>Description:</label><BR />
-  <textarea cols="50" rows="10" name='description_input' required></textarea><BR />
+  <label>Time:</label><BR />
+  <input class="std_input" name='event_time_input' required><BR />
   <label>Speaker:</label><BR />
   <input class="std_input" name='speaker_input' required><BR />
+  <label>Description:</label><BR />
+  <textarea cols="50" rows="7" name='description_input' required></textarea><BR />
   <button class="button">Add</button>
 <% end %>

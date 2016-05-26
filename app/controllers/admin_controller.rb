@@ -2,6 +2,7 @@ class AdminController < ApplicationController
 
   def index
     @events = Event.all
+    # @events_time_sorted = @events.sort { |a,b| b.created_at <=> a.created_at }
   end
 
   def new
@@ -13,6 +14,7 @@ class AdminController < ApplicationController
     event.title = params[:event_title_input]
     event.description = params[:description_input]
     event.speaker = params[:speaker_input]
+    event.time = params[:event_time_input]
     event.save
     @events = Event.all
     render :index
@@ -33,6 +35,7 @@ class AdminController < ApplicationController
     event.title = params[:event_title_input]
     event.description = params[:description_input]
     event.speaker = params[:speaker_input]
+    event.time = params[:event_time_input]
     event.save
     render :index
   end

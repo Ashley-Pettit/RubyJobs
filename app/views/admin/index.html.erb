@@ -12,10 +12,10 @@
   <% @events.each do |event| %>
 
     <a href="/event/show/<%= event.id %>">
-    <h3 id="event_title"><%= "#{event.title} - #{event.speaker} - 10:30" %> </h3></a>
+    <h3 id="event_title"><%= "#{event.title} - #{event.speaker} - #{event.time}" %> </h3></a>
     <div style="margin-left:2rem"><%= event.description %></div>
-
   <% end %>
+
 <% else %>
   <h3>There are no events to show</h3>
 <% end %>
