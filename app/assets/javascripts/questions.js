@@ -20,10 +20,27 @@ var ready = function() {
     span.onclick = function() {
         modal.style.display = "none";
     };
-};
 
-    $('#thumbsup').click(function() {
+
+    $('.fa-thumbs-o-up').click(function(event) {
+
+        //Update the front-end immediately
+        var like_id = event.target;
+        like_id.innerHTML = parseInt(like_id.innerHTML) + 1;
+
+        //Update the backend
+        var id_thumb = event.target.id;
+            var settings = {
+                url: '/events/questions/increment_like',
+                method: 'post',
+                data: {id_thumb}
+            };
+
+        $.ajax(settings).done();
+
     });
 
+
+};
+
 $(document).ready(ready);
-$(document).on('page:load', ready);

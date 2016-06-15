@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
     question.event = Event.find_by_id(params[:id]).id
     question.description = params[:question_body]
     question.user_id = session[:user_id]
-    question.question_likes = 0
+    question.question_likes = 1
     question.save
     redirect_to "/event/#{params[:id]}"
   end

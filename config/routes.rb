@@ -2,11 +2,13 @@ Rails.application.routes.draw do
 
   root 'login#index'
 
+  #login
   get '/login' => 'login#new'
   get '/login/incorrect' => 'login#login_incorrect'
   patch '/login' => 'login#update'
   get '/login/profile' => 'login#profile'
-  get 'logout' => 'login#logout'
+  delete '/logout' => 'login#logout'
+
 
   get '/agenda/index' => 'agenda#index'
   get '/question/index' => 'questions#index'
@@ -14,6 +16,9 @@ Rails.application.routes.draw do
   get '/event_new' => 'admin#new'
 
   get 'about' => 'about#index'
+
+  #Increase likes
+  post '/events/questions/increment_likes' => 'events#increment_like'
 
   #ADMIN ROUTES
   get '/admin' => 'admin#index'

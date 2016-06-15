@@ -1,25 +1,18 @@
 class AgendaController < ApplicationController
 
   def index
-    @events = Event.all
+    @events = Event.order(:time)
   end
 
   def show
-    @event = Event.find_by_id(params[:id])
+    @event = Event.find(params[:id])
     @events = Event.all
     @questions = Question.all
     @users = User.all
-
-    # $('#thumbsup').click(function() {
-    #   @question_likecount += 1
-    # });
-
   end
 
 
-
   def create
-
   end
 
 end

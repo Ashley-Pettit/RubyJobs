@@ -6,13 +6,9 @@ class ApplicationController < ActionController::Base
     session[:user_id]
   end
 
-  def destroy_questions
-    Question.all.destroy
-  end
-
   def find_user_name
     if logged_in?
-       User.find_by(id: session[:user_id]).name ||= "Anonymous"
+       User.find(session[:user_id]).name ||= "Anonymous"
     end
   end
 
@@ -28,7 +24,4 @@ class ApplicationController < ActionController::Base
     end
   end
 
-
 end
-
-#THIS IS THE BASE CONTROLLER

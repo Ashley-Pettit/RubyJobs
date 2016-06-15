@@ -57,13 +57,13 @@ body {
 	text-decoration:underline;
 }
 
-#thumbsup {
+.thumbsup {
   float:right;
   padding:.2rem;
   cursor:pointer;
 }
 
-#thumbsup:hover {
+.thumbsup:hover {
   background-color: lightgreen;
 }
 
@@ -229,4 +229,8 @@ header > h3, footer > h3{
 
 header > h2 {
   margin-top:.4rem;
+}
+
+.fa-thumbs-o-up:hover {
+    background-color: yellow;
 }

@@ -1,4 +1,11 @@
 class Agenda < ActiveRecord::Base
-  def index
+  # def index
+  # end
+
+  def upvote
+    @likes = questions.find params[:id]
+    @likes.increment! :question_likes
   end
+
+
 end
