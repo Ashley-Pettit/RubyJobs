@@ -1,8 +1,20 @@
-<%#P2 - Optional editing of the loggin session - This comes after the new page%>
+<!-- Login page  -->
 
-<h1>Welcome!</h1>
-<h4>Your code has been activated</h4>
-<h5>The fields below are optional. If you do not enter a name your questions will be posted as anonymous</h5>
+<h2>Welcome to RubyJobs </h2>
+<h5>Please Login to access full functionality of the site</h5>
+
+<%= form_tag '/login', method: 'patch' do %>
+  <label>Username or Email: </label><BR />
+  <input class="std_input" name='name_input' placeholder="Example@gmail.com"  autofocus><BR />
+
+  <label>Password:</label><BR />
+  <input class="std_input" name='email_input' placeholder="Please enter your password" value="<%=@user.email%>"><BR />
+
+  <button class="button">Login</button>
+
+<% end %>
+
+<
 
 <%= form_tag '/login', method: 'patch' do %>
   <label>Name: </label><BR />

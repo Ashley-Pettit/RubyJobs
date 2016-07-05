@@ -1,0 +1,15 @@
+<h2>Edit Your Profile</h2>
+
+<%= form_tag "/advertisment/update/#{@seeker.id}", method: 'patch' do %>
+  <label>Job Title:</label><BR />
+  <input class="std_input" name='event_title_input' value="<%= @seeker.title %>" autofocus required><BR />
+  <label>Location:</label><BR />
+  <input class="std_input" name='location_input' value="<%= @seeker.location %>" required><BR />
+  <label>Perks of the role:</label><BR />
+  <textarea cols="50" rows="7" name='description_input' required><%= @seeker.description %></textarea><BR />
+  <label>Necessary Skills:</label><BR />
+  <textarea cols="50" rows="7" name='skills_required' required><%= @seeker.description %></textarea><BR />
+  <label>How To Apply:</label><BR />
+  <textarea cols="50" rows="7" name='apply_details' required><%= @seeker.apply_details %></textarea><BR />
+  <button class="button">Save Changes</button>
+<% end %>

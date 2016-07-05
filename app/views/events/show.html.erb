@@ -1,0 +1,12 @@
+<h2>Would you like to edit this event?</h2>
+
+<h3 id="event_title"><%= "#{@event.title} - #{@event.speaker} - #{@event.time}" %> </h3></a>
+<div style="margin-left:2rem"><%= @event.description %></div>
+
+<%= form_tag "/event/edit/#{@event.id}", method: 'get' do %>
+  <button class="button" style="display:inline-block; float:left">Edit Event</button>
+<% end %>
+
+<%= form_tag "/event/edit/#{@event.id}", method: 'delete' do %>
+  <button class="button" style="margin-left:2rem; float:left">Delete Event</button><br>
+<% end %>
