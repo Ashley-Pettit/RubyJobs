@@ -56,7 +56,14 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Signup', new_user_registration_path %></li>
+
+        <% if user_signed_in? %>
+          <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'Signup', new_user_registration_path %></li>
+          <li><%= link_to 'Sign In', new_user_session_path %></li>
+        <% end %>
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -72,14 +79,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="jumbotron">
-  <div class="container">
 
-  <h1>Hello, world!</h1>
-  <p>...</p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-  </div>
-</div>
 
 <div class="row">
   <div class="col-sm-6 col-md-4">
@@ -117,173 +117,8 @@
 
 </div>
 
+<%= yield %>
 
-
-
-        <!-- <li><a href="#">The Mailing List</a></li>
-        <li><a href="#">Ruby Events</a></li>
-        <li><a href="#">For Employers</a></li> -->
-          <!-- Send a job related message to the maih3ng h3st
-          Browse actively looking Developers
-          Advice on finding and retaining great staff
-          Looking to encourage diversity?
-          I'd h3ke to list my company
-          Write a job advertisment (Free) -->
-
-        <!-- <li><a href="#">For Developers</a></li> -->
-          <!-- Passively Interested? - Sign up to the maih3ng h3st
-          Actively looking for work? - Make yourself a profile
-          Job seeking tips
-          Want to do a technical test? - Not timed
-          Open discussion -->
-        <!-- <li><a href="#">Ruby events near me</a></li>
-        <div>
-        </div>
-
-      </ul>
- -->
-      <!-- mobile only -->
-      <!-- <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">This is the mobile menu icon</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> -->
-      <!-- end mobile only -->
-
-    <!-- </div>
-  </nav> -->
-  <!-- </header> -->
-
-  <!-- navigation end -->
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center red-text text-lighten-2">Welcome to RubyJobs</h1>
-
-        <div class="row center">
-          <h5 class="header col s12 light light-text"> A community driven project for finding staff, job seeking, networking and just having a chat!</h5>
-        </div>
-        <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Continue without Signup</a>
-        </div>
-
-      </div>
-    </div>
-    <div class="parallax">
-      <%= image_tag 'background1.jpg' %>
-      </div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text">
-              <i class="material-icons">flash_on</i></h2>
-              <h5 class="center">Network with the community</h5>
-
-            <p class="light">RubyJobs is run by local developers. We will frequently advertise upcoming ruby events where people can socialize, mingle and code.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text">
-            <i class="material-icons">group</i></h2>
-            <h5 class="center">Find great developers</h5>
-            <p class="light">We understand it's hard to find good developers. So we made it easier! </p>
-            <p class="light"> We hope to pair developers with jobs they'll love and employers with the staff they need. We aren't an agency and are built just for the community.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Join our mailing list</h5>
-
-            <p class="light">We have a dedicated mailing list for employers or developers interested on hearing about what's going on. We send a weekly digest of RubyNews, RubyJobs and what's happening this week in the world of Australian Tech.</p>
-            <p class="light"> If you'd like to message or join the mailing list please <a>click here</a> </p> <p class="light">Please note: To avoid spam you must be an approved registered user to message to the mailing list</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-<!--
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light"></h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="app/assets/images/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div> -->
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Latest Ruby News</h4>
-          <p class="left-align light">Ruby Meetups are now held on the last Wednesday of every month at ***. It's a great way to get to know people listen to what's new in ruby and hey great sponsers put on food and drinks. These events are free of charge. For more details visit the <a>Meetup Page</a></p>
-
-          <p class="left-align light">Ruby hack night runs monthly on the 2nd Wednesday of each month.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-    <%= yield %>
-
-  </body>
-
-
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">About Us</h5>
-          <p class="grey-text text-lighten-4">We are a team of developers dedicated to building a great free of charge employment site. Any amount of help to support this project is greatly appreciated.</p>
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">For Employers</h5>
-          <ul>
-            <li><a class="white-text" href="#!">See who's actively looking for work</a></li>
-            <li><a class="white-text" href="#!">Message a job related vacancy to the mailing list</a></li>
-            <li><a class="white-text" href="#!">Create or edit your company profile</a></li>
-            <li><a class="white-text" href="#!">Let people know your looking for developers</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">For Developers</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Browse job vacancies</a></li>
-            <li><a class="white-text" href="#!"></a>Who hire's ruby developers?</li>
-            <li><a class="white-text" href="#!">Create or edit your profile</a></li>
-            <li><a class="white-text" href="#!">Let people know your interested in job opportunies</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-copyright">
-      <div class="container">
-      A community driven project by the ruby at <a class="brown-text text-lighten-3" href="">RubyJobs</a>
-      </div>
-    </div>
-
-  </footer>
-
+</body>
 
 </html>

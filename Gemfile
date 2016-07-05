@@ -10,6 +10,7 @@ gem 'ajaxify_rails'
 
 #for styling
 gem 'bootstrap-sass'
+gem 'simple_form'
 
 #for auth
 gem 'devise'
