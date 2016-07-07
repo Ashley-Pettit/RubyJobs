@@ -13,6 +13,9 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
+  <script src="https://use.fontawesome.com/a54e857abf.js"></script>
+
+
 </head>
 <body>
 
@@ -28,97 +31,76 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <%= link_to "RubyJobs", root_path, class: 'navbar-brand' %>
+
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
+
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Employers <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><%= link_to 'Create/Edit your company profile - (Highly Recommended)', new_advertisment_path %></li>
+            <li><%= link_to 'Post a Job Advertisement - (Free)', new_advertisment_path %></li>
+            <li><%= link_to 'Send a message to the mailing list', new_advertisment_path %></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><%= link_to "We can't find enough developers. What can we do?'", new_advertisment_path %></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><%= link_to 'Browse actively looking developers - (Beta)', new_advertisment_path %></li>
           </ul>
         </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Developers <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Create a profile - (Recommended and confidential)', new_advertisment_path %></li>
+            <li><%= link_to 'Join our mailing list - (Recommended and zero spam)', new_advertisment_path %></li>
+            <li><%= link_to 'Browse job advertisements', new_advertisment_path %></li>
+            <li><%= link_to 'Browse company bios', new_advertisment_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to 'Where can I meet other developers?', new_advertisment_path %></li>
+            <li><%= link_to "I'm looking for job releated help", new_advertisment_path %></li>
+            <li><%= link_to 'I want to test my skills with a technical test', new_advertisment_path %></li>
+            <li><%= link_to "I'm looking for tutoring", new_advertisment_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to "What events are on in my city?", new_advertisment_path %></li>
+          </ul>
+        </li>
+
+        <li><%= link_to "Ruby Events", new_advertisment_path %></li>
+        <li><%= link_to "About", new_advertisment_path %></li>
+
       </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
       <ul class="nav navbar-nav navbar-right">
 
         <% if user_signed_in? %>
+          <li class='navbar-text'><%= current_user.email %> </li>
           <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to 'Signup', new_user_registration_path %></li>
           <li><%= link_to 'Sign In', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
         <% end %>
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-
-
-<div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="..." alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="..." alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="..." alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
-    </div>
-  </div>
-
-</div>
-
 <%= yield %>
 
 </body>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        Use of the site is subject to the <a>Terms and Conditions.</a> If you notice any issues please help us improve by <a>providing feedback</a>. Opensource - <a>Ashley Pettit</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
 </html>
