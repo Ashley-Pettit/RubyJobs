@@ -39,18 +39,6 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Employers <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to 'Create/Edit your company profile - (Highly Recommended)', new_advertisment_path %></li>
-            <li><%= link_to 'Post a Job Advertisement - (Free)', new_advertisment_path %></li>
-            <li><%= link_to 'Send a message to the mailing list', new_advertisment_path %></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to "We can't find enough developers. What can we do?'", new_advertisment_path %></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to 'Browse actively looking developers - (Beta)', new_advertisment_path %></li>
-          </ul>
-        </li>
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Developers <span class="caret"></span></a>
@@ -69,6 +57,20 @@
           </ul>
         </li>
 
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Employers <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Create/Edit your company profile - (Highly Recommended)', new_advertisment_path %></li>
+            <li><%= link_to 'Post a Job Advertisement - (Free)', new_advertisment_path %></li>
+            <li><%= link_to 'Send a message to the mailing list', new_advertisment_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to "We can't find enough developers. What can we do?'", new_advertisment_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to 'Browse actively looking developers - (Beta)', new_advertisment_path %></li>
+          </ul>
+        </li>
+
+        <li><%= link_to "JobMatcher - (Beta)", new_advertisment_path %></li>
         <li><%= link_to "Ruby Events", new_advertisment_path %></li>
         <li><%= link_to "About", new_advertisment_path %></li>
 
@@ -95,9 +97,7 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
-        Use of the site is subject to the <a>Terms and Conditions.</a> If you notice any issues please help us improve by <a>providing feedback</a>. Opensource - <a>Ashley Pettit</a>
-      </div>
+      Use of the site is subject to the <a>Terms and Conditions.</a> If you notice any issues please help us improve by <a>providing feedback</a>. Opensource - <a>Ashley Pettit</a>
     </div>
   </div>
 </footer>
