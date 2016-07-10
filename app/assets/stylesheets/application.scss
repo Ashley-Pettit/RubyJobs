@@ -6,78 +6,83 @@
  */
 
 
-#heading_main {
+
+ #heading_main {
+    text-align:center;
+    color:#ee6e73;
+    margin:auto;
+    width:80%;
+    text-align:center;
+  }
+
+ #heading_basic {
    text-align:center;
-   color:#ee6e73;
+   color:#000;
    margin:auto;
-   width:80%;
-   text-align:center;
  }
 
-#heading_basic {
-  text-align:center;
-  color:#000;
-  margin:auto;
-}
+ #text_headings {
+   text-align: center;
+   vertical-align: middle;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 1.5;
+   font-family: "Roboto", sans-serif;
+   margin:auto;
+   width:72%;
+   padding-bottom: 1rem;
+   padding-top: 1rem;
+ }
 
-#text_headings {
-  text-align: center;
-  vertical-align: middle;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: "Roboto", sans-serif;
-  margin:auto;
-  width:72%;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
-
-#text_default {
-  text-align: center;
-  vertical-align: middle;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: "Roboto", sans-serif;
-  margin:auto;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
+ #text_default {
+   text-align: center;
+   vertical-align: middle;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 1.5;
+   font-family: "Roboto", sans-serif;
+   margin:auto;
+   padding-bottom: 1rem;
+   padding-top: 1rem;
+ }
 
 
-#icon {
-  padding-top:1rem;
-  display: block;
-  margin: auto;
-  text-align: center;
-  color: #ee6e73;
-}
+ #icon {
+   padding-top:1rem;
+   display: block;
+   margin: auto;
+   text-align: center;
+   color: #ee6e73;
+ }
 
-#btn_centered {
-  margin: auto;
-  text-align: center;
-  display: block;
-}
+ #btn_centered {
+   margin: auto;
+   text-align: center;
+   display: block;
+ }
 
-#btn_centered{
-  margin-bottom: .5rem;
-}
+ #btn_centered{
+   margin-bottom: .5rem;
+ }
 
-.jumbotron {
-  padding-top:30px;
-}
+ .jumbotron {
+   padding-top:30px;
+ }
 
-#icon_box {
-  height:33rem;
-}
+ #icon_box {
+   height:33rem;
+ }
 
-.jumbotron {
-  // margin-bottom: 0px;
-  // padding-bottom: 0px;
-}
+ .jumbotron {
+   // margin-bottom: 0px;
+   // padding-bottom: 0px;
+ }
 
-footer {
-  background-color: #e7e7e7;
-  padding: 1rem;
-}
+ footer {
+   background-color: #e7e7e7;
+   padding: 1rem;
+ }
+
+ a{
+   cursor:pointer;
+ }

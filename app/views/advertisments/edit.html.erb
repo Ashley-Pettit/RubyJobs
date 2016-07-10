@@ -1,11 +1,11 @@
 <h2>Edit Your Advertisment</h2>
 
 <%= form_tag "/advertisment/update/#{@advertisement.id}", method: 'patch' do %>
-  <label>Job Title:</label><BR />
-  <input class="std_input" name='event_title_input' value="<%= @advertisment.title %>" autofocus required><BR />
-  <label>Location:</label><BR />
-  <input class="std_input" name='location_input' value="<%= @advertisment.location %>" required><BR />
-  <label>Perks of the role:</label><BR />
+  <label>Job Title:</label><br>
+  <input class="std_input" name='event_title_input' value="<%= @advertisment.title %>" autofocus required><br>
+  <label>Location:</label><br>
+  <input class="std_input" name='location_input' value="<%= @advertisment.location %>" required><br>
+  <label>Perks of the role:</label><br>
   <textarea cols="50" rows="7" name='description_input' required><%= @advertisment.description %></textarea><BR />
   <label>Necessary Skills:</label><BR />
   <textarea cols="50" rows="7" name='skills_required' required><%= @advertisment.description %></textarea><BR />
