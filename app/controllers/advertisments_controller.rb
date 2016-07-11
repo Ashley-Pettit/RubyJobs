@@ -14,10 +14,9 @@ class AdvertismentsController < ApplicationController
   end
 
   def create
-    #Executed by the post request on from the new page. After ad created should render the index page with a sucessful alert.
+    #Executed by thep ost request on from the new page. After ad created should render the index page with a sucessful alert.
     # advertisment = Advertisment.New
     # advertisment.save
-
     render :index
   end
 
