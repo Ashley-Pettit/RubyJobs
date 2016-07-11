@@ -1,31 +1,31 @@
+##Welcome to RubyJobs!
 
-**WHAT IS QUESTIONABLE?**
+RubyJobs is a one stop shop to see what's happening in the community, search for a job/developer, advertise your company/yourself, message our mailing list, create a company/personal bio and lastly we are working on a 'job matching system' to help send relevant opportunities to the correct people automatically.
 
-Questionable is a web application that helps to sort the responses to lectures at a conference.
+- When will RubyJobs be ready?
+ - Late 2016
 
-Often times these questions - when voiced live - are inane, repetitive, or have too much extraneous information. In this application questions are sorted the questions with the cream rising to the top. This can be achieved via audience voting or via a logged in moderator
+######Thanks to  community input RubyJobs is 100% free and is riding Ruby On Rails
 
-In the application you can see questions out from the audience in a format such as via most liked questions, random questions, trending questions as well as recent additions).
+##Why would I use RubyJobs?
 
-The idea is to have the most liked questions to be those answered by the speaker.
+- It's purely for Ruby Jobs and nothing else. It's pretty good like that.
+- Job matching is coming meaning no more scrolling through job boards. You can be matched with appropriate jobs.
+- RubyJobs was built by the community for the community. We help our users to know what Ruby events are on, what sites are worth visiting and have an open forum to discuss ruby related topics
 
-In addition future development aims to increase audience participation by allowing the speaker to pose questions to the audience
 
-**HOW TO USE**
+## FAQ
 
-Questionable is open-source software and is available via heroku at ****.
+- I'm looking for a Java developer. May I advertise on your site?
+ - No
+- Does advertising cost any money?
+ - Advertising with RubyJobs is free. It comes with the caveat that we do impose criteria on advertisments such that the job board remains as clear as possible to Job Seekers.
+ - Don't worry we still understand the nature of recruitment and some things such as salary can remain hidden if they need to.
+ - We are understanding of recruitment needs however; wherever possible we promote as much transparacy  as possible. We don't want our job board being filled with vague jobs where details are vague etc... We promote detail so that developers using the site can make educated applications.
+ - This site was built with the help of an ex-recruitment agent so we do know what we are doing!
 
-Alternatively you may download this software and after running the following commands you will be able to run it via a local server.
+##Status
 
-1 - Ensure you have both ruby and rails installed. Please visit ruby.org for details.
-2 - Press download to desktop. A Zip file will now be saved to your desktop
-3 - After extracting the ZIP navigate to the directory using terminal or the command line
-4 - Run 'bundle install' in your terminal - This will ensure you have the required ruby gems
+RubyJobs is presently under development. Please check back in a bit to see where we are at!
 
-**Functionality**
-
-This application has basic user authetication. Users are able to login via an allocated ticket which is deemed to be on their ticket to the conference.
-
-The user logs into to the app with their ticket code, and has the option to add some details (or to remain anonymous).
-
-The user to the full array of talks on offer, and the ability to ask questions of the various speakers. Note though, the user has a trade off between a question or a like, and a
+If you'd like to contribute please email Ashley@digital380.com.au
