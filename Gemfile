@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 # gem "better_errors"
 gem 'turbolinks'
 
+
 # For ajax in rails without JS
 gem 'ajaxify_rails'
 
@@ -52,6 +53,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'launchy'
 end
 
 group :development do

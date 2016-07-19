@@ -5,19 +5,19 @@ class AdvertismentsController < ApplicationController
   end
 
   def show
-    #Here a developer can read 1 particular job advertisment
-
+    @advertisment = Advertisment.find(params[:id])
   end
 
   def new
-    #Here an advertiser sees a screen and should be able to make an advertisment.
+    @advertisment = Advertisment.new
   end
 
   def create
-    #Executed by thep ost request on from the new page. After ad created should render the index page with a sucessful alert.
-    # advertisment = Advertisment.New
-    # advertisment.save
-    render :index
+    @advertisment = Advertisment.new(advertisment_params)
+    if @advertisment.save
+      flash[:notice] = "Your Advertisment was created"
+      redirect_to @advertisment
+    end
   end
 
   def edit
@@ -27,6 +27,12 @@ class AdvertismentsController < ApplicationController
   end
 
   def delete
+  end
+
+  private
+
+  def advertisment_params
+    params.require(:advertisment).permit(:company, :job_title, :location)
   end
 
 end

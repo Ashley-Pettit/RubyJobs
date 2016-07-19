@@ -9,18 +9,17 @@
 
     <h3 id="heading_basic">Describe your vacancy?</h3>
 
-    <%= form_tag advertisments_path, method: 'post' do %>
+    <%= simple_form_for @advertisment do |f| %>
 
-      <button class="btn">Create advertisment</button>
+      <%= render "company_details", f: f %>
+      <!-- <%= render "company_type" %>
+      <%= render "seniority" %> -->
+
+      <%= f.submit %>
     <% end %>
 
-    <%= render partial: "company_details"%>
-    <%= render partial: "company_type"%>
-    <%= render partial: "seniority"%>
-
-
-            <label id="text_default">What is your rough salary range?</label><br>
-            ---------- Im A SLIDER BAR WOOO ----------<br>
+      <!-- <label id="text_default">What is your rough salary range?</label><br>
+      ---------- Im A SLIDER BAR WOOO ----------<br>
 
         <label id="text_default">What types of work are you open to considering offering? <i>One or more</i></label><br>
 
@@ -37,8 +36,8 @@
             <input type="checkbox" aria-label="..." autocomplete="off"><br>
             <label id="text_default">Internship</label>
             <input type="checkbox" autocomplete="off">
-  </label>
-</div><br>
+    </label>
+    </div><br>
 
         <label id="text_default">Is remote work an option?</label><br>
         <div class="btn-group" data-toggle="buttons">
@@ -77,9 +76,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
+
 
 Information box to sit top right
 
