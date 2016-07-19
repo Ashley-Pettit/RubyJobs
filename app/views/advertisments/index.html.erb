@@ -1,17 +1,11 @@
-<%# See All Job Advertisments %>
-
-Search fields go here. Simple checkboxes
-Jnr Mid Snr Lead Management
-Location
+<h3 id="heading_main">Let's find your dream job</h3>
 
 <% if !@advertisments.nil? %>
-
-  <% @events.each do |advertisment| %>
-    <a href="/advertisment/<%= advertisment.id %>">
-    <h3 id="advertisment_title"><%= "#{advertisment.title} - #{advertisment.location} - #{advertisment.advertiser}" %> </h3></a>
-    <div style="margin-left:2rem"><%= advertisment.description %></div>
+  <% @advertisments.each do |advertisment| %>
+    <h3><%= advertisment.company %> - <%= advertisment.job_title %></h3>
+    <h5><%= advertisment.location %></h5>
+    <br>
   <% end %>
-
 <% else %>
   <h3>There are no advertiments to show</h3>
 <% end %>

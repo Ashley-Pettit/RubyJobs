@@ -1,82 +1,71 @@
-<div class="jumbotron">
-  <div class="container">
+<%= render "advertisment_heading" %>
 
-    <%= render "advertisment_heading" %>
+<%= simple_form_for @advertisment do |f| %>
 
-    <%= simple_form_for @advertisment do |f| %>
+  <%= render "company_details", f: f %>
+  <%= render "company_type", f: f %>
+  <%= render "seniority", f: f %>
+  <%= render "work_type", f: f %>
 
-      <%= render "company_details", f: f %>
-      <%= render "company_type", f: f %>
-      <%= render "seniority", f: f %>
+  <%= f.label :seniority, label: 'Are you able to describe the project or type of projects the successful person will likely be working on', as: :check_boxes %><br>
 
-      <%= f.submit %>
-    <% end %>
+  <input id="product" name="user[options]" type="radio"/>
+  <label class="collection_radio_buttons" for="product">Product company</label>
 
-      <!-- <label id="text_default">What is your rough salary range?</label><br>
-      ---------- Im A SLIDER BAR WOOO ----------<br>
 
-        <label id="text_default">What types of work are you open to considering offering? <i>One or more</i></label><br>
 
-        <div class="btn-group" data-toggle="buttons">
-          <div class="input-group">
-          <span class="input-group-addon">
-            <label id="text_default">Permanent (Full-time)</label>
-            <input type="checkbox" aria-label="..."><br>
-            <label id="text_default">Permanent (Part-time)</label>
-            <input type="checkbox" aria-label="..."><br>
-            <label id="text_default">Contract (Limited duration)</label>
-            <input type="checkbox" aria-label="..." autocomplete="off"><br>
-            <label id="text_default">Freelance (Ad-Hoc)</label>
-            <input type="checkbox" aria-label="..." autocomplete="off"><br>
-            <label id="text_default">Internship</label>
-            <input type="checkbox" autocomplete="off">
-    </label>
-    </div><br>
+  <%= f.submit %>
+<% end %>
 
-        <label id="text_default">Is remote work an option?</label><br>
-        <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-primary">
-          <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes </label>
-          <label class="btn btn-primary">
-          <input type="radio" name="options" id="option2" autocomplete="off"> No </label>
-        </div><br><br>
 
-        <label id="text_default">Would your company be able to and willing to sponsor a really good applicant?</label><br>
-        <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-primary">
-          <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes </label>
-          <label class="btn btn-primary">
-          <input type="radio" name="options" id="option2" autocomplete="off"> No </label>
-        </div><br><br>
 
-        <label id="text_default">Would you consider someone to work remotely?</label><br>
-        <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-primary">
-          <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes </label>
-          <label class="btn btn-primary">
-          <input type="radio" name="options" id="option2" autocomplete="off"> No </label>
-        </div>
-            </div><br>
+  <!-- <label id="text_default">What is your rough salary range?</label><br>
+  ---------- Im A SLIDER BAR WOOO ----------<br>
 
-            <label id="text_default">Are you able to describe the project or type of projects the successful person will likely be working on:</label><br>
-            <textarea cols="50" rows="4" name='description_input'></textarea><br>
-            <label id="text_default">Perks of the role:</label><br>
-            <textarea cols="50" rows="4" name='description_input'></textarea><br>
-            <label id="text_default">Necessary Skills:</label><br>
-            <textarea cols="50" rows="4" name='skills_required'></textarea><br>
-            <label id="text_default">How should people apply:</label><br>
-            <textarea cols="50" rows="4" name='apply_details'></textarea><br>
 
-          </div>
-        </div>
+    <label id="text_default">Is remote work an option?</label><br>
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary">
+      <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes </label>
+      <label class="btn btn-primary">
+      <input type="radio" name="options" id="option2" autocomplete="off"> No </label>
+    </div><br><br>
+
+    <label id="text_default">Would your company be able to and willing to sponsor a really good applicant?</label><br>
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary">
+      <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes </label>
+      <label class="btn btn-primary">
+      <input type="radio" name="options" id="option2" autocomplete="off"> No </label>
+    </div><br><br>
+
+    <label id="text_default">Would you consider someone to work remotely?</label><br>
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary">
+      <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes </label>
+      <label class="btn btn-primary">
+      <input type="radio" name="options" id="option2" autocomplete="off"> No </label>
+    </div>
+        </div><br>
+
+        <label id="text_default">Are you able to describe the project or type of projects the successful person will likely be working on:</label><br>
+        <textarea cols="50" rows="4" name='description_input'></textarea><br>
+        <label id="text_default">Perks of the role:</label><br>
+        <textarea cols="50" rows="4" name='description_input'></textarea><br>
+        <label id="text_default">Necessary Skills:</label><br>
+        <textarea cols="50" rows="4" name='skills_required'></textarea><br>
+        <label id="text_default">How should people apply:</label><br>
+        <textarea cols="50" rows="4" name='apply_details'></textarea><br>
+
       </div>
-    </div> -->
+    </div>
   </div>
-</div>
+</div> -->
 
 
-Information box to sit top right
+
+<!-- Information box to sit top right
 
 We know writing ads can be boring an ineffecient! Why not make a <a>company bio</a> and let the community know about you and what you are usually looking for. Even better when JobMatcher comes out you could be automatically matched with the staff you need!
 
-help icon text on hover - <i>We understand 'blind posts' are sometimes necessary. Specifying the company name will increase applications but if absolutely necessary you can leave this blank.</i>
+help icon text on hover - <i>We understand 'blind posts' are sometimes necessary. Specifying the company name will increase applications but if absolutely necessary you can leave this blank.</i> -->
