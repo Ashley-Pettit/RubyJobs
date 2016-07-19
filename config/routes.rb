@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :events
   resources :mailing_list
 
+  get 'welcome/page_under_contruction' => 'welcome#page_under_contruction'
 
   root 'welcome#index'
 
