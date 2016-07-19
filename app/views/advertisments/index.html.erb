@@ -1,11 +1,15 @@
 <h3 id="heading_main">Let's find your dream job</h3>
 
-<% if !@advertisments.nil? %>
+<% if @advertisments.present? %>
   <% @advertisments.each do |advertisment| %>
-    <h3><%= advertisment.company %> - <%= advertisment.job_title %></h3>
+    <h3><%= link_to "#{advertisment.company} - #{advertisment.job_title}", advertisment_path(advertisment.id) %></h3>
     <h5><%= advertisment.location %></h5>
+    <h5><%= advertisment.project %></h5>
     <br>
   <% end %>
 <% else %>
   <h3>There are no advertiments to show</h3>
 <% end %>
+
+
+<%# if @tickets.present? %>

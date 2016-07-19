@@ -1,6 +1,6 @@
 class AdvertismentsController < ApplicationController
   def index
-    #This method should show developers available advertisments
+    @advertisments = Advertisment.all
   end
 
   def show
@@ -31,7 +31,7 @@ class AdvertismentsController < ApplicationController
   private
 
   def advertisment_params
-    params.require(:advertisment).permit(:company, :job_title, :location)
+    params.require(:advertisment).permit(:company, :job_title, :location, :project)
   end
 
 end

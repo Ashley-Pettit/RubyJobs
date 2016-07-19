@@ -15,93 +15,25 @@
 
   <script src="https://use.fontawesome.com/a54e857abf.js"></script>
 
-
 </head>
 <body>
 
-  <!-- navigation start -->
-
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to "RubyJobs", root_path, class: 'navbar-brand' %>
-
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Developers <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to 'Create a profile - (Recommended and confidential)', new_advertisment_path %></li>
-            <li><%= link_to 'Join our mailing list - (Recommended and zero spam)', new_advertisment_path %></li>
-            <li><%= link_to 'Browse job advertisements', new_advertisment_path %></li>
-            <li><%= link_to 'Browse company bios', new_advertisment_path %></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to 'Where can I meet other developers?', new_advertisment_path %></li>
-            <li><%= link_to "I'm looking for job releated help", new_advertisment_path %></li>
-            <li><%= link_to 'I want to test my skills with a technical test', new_advertisment_path %></li>
-            <li><%= link_to "I'm looking for tutoring", new_advertisment_path %></li>
-            <li><%= link_to "I'm interested in Rails Girls", new_advertisment_path %></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to "What events are on in my city?", new_advertisment_path %></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Employers <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to 'Create/Edit your company profile - (Highly Recommended)', new_advertisment_path %></li>
-            <li><%= link_to 'Post a Job Advertisement - (Free)', new_advertisment_path %></li>
-            <li><%= link_to 'Send a message to the mailing list', new_advertisment_path %></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to "We can't find enough developers. What can we do?'", new_advertisment_path %></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to 'Browse actively looking developers - (Beta)', new_advertisment_path %></li>
-          </ul>
-        </li>
-
-        <li><%= link_to "JobMatcher - (Beta)", new_advertisment_path %></li>
-        <li><%= link_to "Ruby Events", new_advertisment_path %></li>
-        <li><%= link_to "Forums", new_advertisment_path %></li>
-        <li><%= link_to "About", new_advertisment_path %></li>
-
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-
-        <% if user_signed_in? %>
-          <li class='navbar-text'><%= current_user.email %> </li>
-          <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-        <% end %>
-
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+<%= render "layouts/navigation" %>
 
 <%= flash[:notice] %>
 
-<%= yield %>
+<div class="jumbotron">
+  <div class="container">
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 
 <footer>
   <div class="container">
     <div class="row">
-      Use of the site is subject to the <a>Terms and Conditions.</a> If you notice any issues please help us improve by <a>providing feedback</a>. <a>Ashley Pettit</a>
+      Use of the site is subject to the <a>Terms and Conditions.</a> If you notice any issues please help us improve by <a>providing feedback</a>. <a>The RubyJobs Team</a>
     </div>
   </div>
 </footer>
