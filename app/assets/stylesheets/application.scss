@@ -5,7 +5,9 @@
 *= require_tree .
  */
 
-
+html, body {
+  height: 100%;
+}
 
  #heading_main {
     text-align:center;
@@ -79,6 +81,8 @@
  }
 
  footer {
+   text-align:center;
+   height: 44px;
    background-color: #e7e7e7;
    padding: 1rem;
  }
