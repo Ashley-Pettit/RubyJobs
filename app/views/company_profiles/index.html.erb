@@ -1,17 +1,10 @@
-<%# See All Job Advertisments %>
+<h2> Companies using Ruby on Rails </h2>
 
-Search fields go here. Simple checkboxes
-Jnr Mid Snr Lead Management
-Location
-
-<% if !@advertisments.nil? %>
-
-  <% @events.each do |advertisment| %>
-    <a href="/advertisment/<%= advertisment.id %>">
-    <h3 id="advertisment_title"><%= "#{advertisment.title} - #{advertisment.location} - #{advertisment.advertiser}" %> </h3></a>
-    <div style="margin-left:2rem"><%= advertisment.description %></div>
+<h3> <% @company.each %> </h3>
+<% if @company.present? %>
+  <% @company.each do |company| %>
+    <h3><%= link_to "#{company.name} - #{company.bio}", company_profile_path(company.id)%></h3>
   <% end %>
-
 <% else %>
-  <h3>There are no advertiments to show</h3>
+  <h3>There are no Company Profiles to show at this time</h3>
 <% end %>
