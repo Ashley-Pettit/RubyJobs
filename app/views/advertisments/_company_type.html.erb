@@ -1,15 +1,15 @@
-<label id="text_default">Which of the following most accurately describes your company?</label><br>
-<div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-primary">
-    <input type="radio" autocomplete="off" checked>Recruitment Agency
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" autocomplete="off">Digital Agency
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" autocomplete="off">Consultancy/Services
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" autocomplete="off">Product company
-  </label>
-</div><br>
+<%= f.label :company_type, label: 'Which of the following most accurately describes your company?', as: :radio_buttons %><br>
+
+<input id="recruitment_agency" name="user[options]" type="radio"/>
+<label class="collection_radio_buttons" for="recruitment_agency">Recruitment Agency</label>
+
+<input id="digital_agency" name="user[options]" type="radio"/>
+<label class="collection_radio_buttons" for="digital_agency">Digital Agency</label>
+
+<input id="consultancy" name="user[options]" type="radio"/>
+<label class="collection_radio_buttons" for="consultancy">Consultancy/Services</label>
+
+<input id="product" name="user[options]" type="radio"/>
+<label class="collection_radio_buttons" for="product">Product company</label>
+
+<br>

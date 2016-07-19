@@ -1,21 +1,23 @@
-<label id="text_default">What level(s) of seniority are you open to considering?</label><br>
-<div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-primary">
-    <input type="checkbox" name="options" id="option1" autocomplete="off"> Internship (No commercial experience)
-  </label>
-  <label class="btn btn-primary">
-    <input type="checkbox" name="options" id="option2" autocomplete="off"> Junior (0-2 years)
-  </label>
-  <label class="btn btn-primary">
-    <input type="checkbox" name="options" id="option3" autocomplete="off"> Mid-Level (2-5 years)
-  </label>
-  <label class="btn btn-primary">
-    <input type="checkbox" name="options" id="option4" autocomplete="off"> Senior (5-7+ years)
-  </label>
-  <label for="options" class="btn btn-primary">
-    <input type="checkbox" name="options" id="option5" autocomplete="off"> Team Lead (7+ years)
-  </label>
-  <label class="btn btn-primary">
-    <input type="checkbox" name="options" id="option6" autocomplete="off"> Team Management/CTO
-  </label>
-  <br><br><i>Please Note: Our community needs more juniors. We love companies that invest back into the community by hiring passionate juniors.</i><br>
+<%= f.label :seniority, label: 'What level(s) of seniority are you open to considering?', as: :check_boxes %><br>
+
+<input id="internship" name="user[options]" type="checkbox"/>
+<label class="collection_radio_buttons" for="internship">Internship (No commercial experience)</label>
+
+<input id="junior" name="user[options]" type="checkbox"/>
+<label class="collection_radio_buttons" for="junior">Junior (0-2 years)</label>
+
+<input id="mid_level" name="user[options]" type="checkbox"/>
+<label class="collection_radio_buttons" for="mid_level">Mid-Level (2-5 years)</label>
+
+<input id="senior" name="user[options]" type="checkbox"/>
+<label class="collection_radio_buttons" for="senior">Senior (5-7+ years)</label>
+
+<input id="team_lead" name="user[options]ß" type="checkbox" />
+<label class="collection_radio_buttons" for="team_lead">Team Lead (7+ years)</label>
+
+<input id="management" name="user[options]" type="checkbox" />
+<label class="collection_radio_buttons" for="management">Team Management/CTO</label>
+
+<br>
+
+<i>Please Note: Our community needs more juniors. We love companies that invest back into the community by hiring passionate juniors.</i><br>

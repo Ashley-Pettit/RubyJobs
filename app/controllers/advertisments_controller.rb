@@ -1,5 +1,4 @@
 class AdvertismentsController < ApplicationController
-
   def index
     #This method should show developers available advertisments
   end
