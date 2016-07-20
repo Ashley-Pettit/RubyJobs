@@ -1,4 +1,5 @@
 class AdvertismentsController < ApplicationController
+  # before_action
   def index
     @advertisments = Advertisment.all
   end
@@ -20,12 +21,17 @@ class AdvertismentsController < ApplicationController
   end
 
   def edit
+    @advertisment = Advertisment.find(params[:id])
   end
 
   def update
+    @advertisment = Advertisment.find(params[:id])
   end
 
-  def delete
+  def destroy
+    @advertisment = Advertisment.find(params[:id])
+    @advertisment.destroy
+    redirect_to advertisments_path
   end
 
   private
